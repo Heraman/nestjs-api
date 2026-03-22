@@ -80,15 +80,6 @@ export class WhatsappService implements OnModuleInit {
         await this.socket.sendMessage(jid, { text: message + '\n\n*Powered by Jilpa*' });
     }
 
-    // async sendOtp(to: string, otp: string) {
-    //     const jid = to.includes('@s.whatsapp.net') ? to : `${to}@s.whatsapp.net`;
-    //     await sendInteractiveMessage(this.socket, jid, {
-    //         text: `Kode OTP Anda: ${otp}`,
-    //         interactiveButtons: [
-    //             { name: 'cta_copy', buttonParamsJson: JSON.stringify({ display_text: 'Copy OTP', copy_code: otp }) },,
-    //         ]
-    //     });
-    // }
 
     async sendOtp(phone: string, otp: string) {
         const jid = phone.includes('@s.whatsapp.net') ? phone : `${phone}@s.whatsapp.net`;
