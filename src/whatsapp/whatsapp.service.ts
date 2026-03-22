@@ -98,7 +98,6 @@ export class WhatsappService implements OnModuleInit {
             ]
         };
 
-        // Pastikan 'this.socket' adalah instance Baileys yang aktif
         return await sendButtons(this.socket, jid, payload);
     }
 
