@@ -9,7 +9,7 @@ import { jwtConstants } from './constants';
   imports: [
     JwtModule.register({
       global: true,
-      secret: jwtConstants.secret,
+      secret: process.env.SECRET_KEY_JWT,
       signOptions: { expiresIn: '1h' },
     }),
   ],
